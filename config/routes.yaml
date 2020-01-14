@@ -1,0 +1,4 @@
+shout:
+    path: /shout/{twitterName}
+    controller: App\Sample\Application\Controller\ShoutController::index
+
