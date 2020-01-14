@@ -11,7 +11,7 @@ use App\Sample\Domain\Interfaces\Service\JWTTokenServiceInterface;
 
 /**
  * Class JWTTokenService
- * An example of a service that properly works with JWT tokens.
+ * An example of a service is that properly works with JWT tokens.
  *
  * @package App\Service
  */
