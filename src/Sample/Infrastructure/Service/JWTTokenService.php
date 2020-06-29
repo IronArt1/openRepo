@@ -2,6 +2,9 @@
 
 namespace App\Service;
 
+// This example of codding has nothing to do with current test application. 
+// The only purpose is just to have a glimpse on binary stuff.
+
 //use App\Exception\{
 //    TokenAlgorithmException,
 //    TokenSignatureIsEmptyException,
