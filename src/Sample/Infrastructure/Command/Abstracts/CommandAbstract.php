@@ -67,6 +67,10 @@ abstract class CommandAbstract
 
     /**
      * Calling events so as to create a general flow
+     * Taking in account Big O notation we can call a roadmap for a command here
+     * Or if you do not agree with the appoach we can call here static where we specificaly 
+     * determine all functions to be called...
+     *
      */
     public function run(): void
     {
