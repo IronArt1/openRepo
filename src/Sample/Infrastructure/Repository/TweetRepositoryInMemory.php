@@ -23,10 +23,13 @@ final class TweetRepositoryInMemory implements TweetRepositoryInMemoryInterface
     private $data = ['/asd/qwe?zxc=1' => '3M9V2MNV2XC23HLN4K67N56M0998'];
 
     /**
+     * Obviously tweets would be comming from a DB. 
+     * Here it's just for the simplicity purposes
+     *
      * An array of tweets'
      */
     private const TWEETS = [
-        'Trump' => [
+        'User1' => [
             "I am not very skeptical… a good deal of skepticism in a scientific man is advisable to avoid much loss of time, but I have met not a few men, who… have often thus been deterred from experiments or observations which would have proven servicable.",
             "I know that most men, including those at ease with problems of the greatest complexity, can seldom accept even the simplest and most obvious truth if it be such as would oblige them to admit the falsity of conclusions which they have delighted in explaining to colleagues, which they have proudly taught to others, and which they have woven, thread by thread, into the fabric of their lives.",
             "When even the brightest mind in our world has been trained up from childhood in a superstition of any kind, it will never be possible for that mind, in its maturity, to examine sincerely, dispassionately, and conscientiously any evidence or any circumstance which shall seem to cast a doubt upon the validity of that superstition. I doubt if I could do it myself.",
@@ -49,7 +52,7 @@ final class TweetRepositoryInMemory implements TweetRepositoryInMemoryInterface
             "Daring ideas are like chessmen moved forward; they may be defeated, but they start a winning game.",
             "If we will only allow that, as we progress, we remain unsure, we will leave opportunities for alternatives. We will not become enthusiastic for the fact, the knowledge, the absolute truth of the day, but remain always uncertain… In order to make progress, one must leave the door to the unknown ajar.",
         ],
-        'Melania' => [
+        'User2' => [
             "Modern science should indeed arouse in all of us a humility before the immensity of the unexplored and a tolerance for crazy hypotheses.",
             "Almost all really new ideas have a certain aspect of foolishness when they are first produced.",
             "The mind likes a strange idea as little as the body likes a strange protein and resists it with similar energy. It would not perhaps be too fanciful to say that a new idea is the most quickly acting antigen known to science.",
@@ -72,7 +75,7 @@ final class TweetRepositoryInMemory implements TweetRepositoryInMemoryInterface
             "The only solid piece of scientific truth about which I feel totally confident is that we are profoundly ignorant about nature… It is this sudden confrontation with the depth and scope of ignorance that represents the most significant contribution of twentieth-century science to the human intellect.",
             "Sit down before facts like a child, and be prepared to give up every preconceived notion, follow humbly wherever and to whatever abysses Nature leads, or you shall learn nothing.",
         ],
-        'Ivanka' => [
+        'User3' => [
             "If we watch ourselves honestly we shall often find that we have begun to argue against a new idea even before it has been completely stated.",
             "When a man finds a conclusion agreeable, he accepts it without argument, but when he finds it disagreeable, he will bring against it all the forces of logic and reason.",
             "Science might be better served when some scientists generate novel ideas while others carp at everything new, than if all scientists could somehow become disinterestedly skeptical.",
@@ -94,7 +97,7 @@ final class TweetRepositoryInMemory implements TweetRepositoryInMemoryInterface
             "There are many hypotheses in science which are wrong. That’s perfectly all right; they’re the aperture to finding out what’s right",
             "I personally feel it is presumptuous to believe that man can determine the whole temporal structure of the universe, its evolution, development and ultimate fate from the first nanosecond of creation to the last 10^10 years, on the basis of three or four facts which are not very accurately known and are disputed among the experts.",
         ],
-        'Barron' => [
+        'User4' => [
             "Man’s greatest asset is the unsettled mind.",
             "The voyage of discovery lies not in seeking new horizons, but in seeing with new eyes.",
             "Research is to see what everybody else has seen, and to think what nobody else has thought.",
@@ -117,7 +120,7 @@ final class TweetRepositoryInMemory implements TweetRepositoryInMemoryInterface
             "A new scientific truth does not triumph by convincing its opponents and making them see the light, but rather because its opponents eventually die and a new generation grows up that is familiar with it.",
             "Science advances funeral by funeral.",
         ],
-        'Tiffany' => [
+        'User5' => [
             "The discovery of truth is prevented more effectively not by the false appearance of things present and which mislead into error, not directly by weakness of the reasoning powers, but by preconceived opinion, by prejudice.",
             "It is a puzzling thing. The truth knocks on the door and you say, ‘Go away, I’m looking for the truth.’ and so it goes away. Puzzling.",
             "They are ill discoverers that think there is no land when they see nothing but sea.",
@@ -140,7 +143,7 @@ final class TweetRepositoryInMemory implements TweetRepositoryInMemoryInterface
             "Don’t worry about people stealing your ideas. If your ideas are that good, you’ll have to ram them down people’s throats.",
             "Physical concepts are the free creations of the human mind and are not, however it may seem, uniquely determined by the external world.",
         ],
-        'Eric' => [
+        'User6' => [
             "I can’t see any farther. Giants are standing on my shoulders!",
             "In science it often happens that scientists say, 'You know that’s a really good argument; my position is mistaken' and then they would actually change their minds and you never hear that old view from them again. They really do it. It doesn’t happen as often as it should, because scientists are human and change is sometimes painful. But it happens every day. I cannot recall the last time something like that happened in politics or religion.",
             "When I examined myself and my methods of thought, I came to the conclusion that the gift of fantasy has meant more to me than my talent for absorbing positive knowledge.",
@@ -163,7 +166,7 @@ final class TweetRepositoryInMemory implements TweetRepositoryInMemoryInterface
             "Without deviation from the norm, progress is not possible.",
             "A witty saying proves nothing."
         ],
-        'Donald' => [
+        'User7' => [
             "...By far the most usual way of handling phenomena so novel that they would make for a serious rearrangement of our preconceptions is to ignore them altogether, or to abuse those who bear witness for them.",
             "The pressure for conformity is enormous. I have experienced it in editors rejection of submitted papers, based on venomous criticism of anonymous referees. The replacement of impartial reviewing by censorship will be the death of science.",
             "When adults first become conscious of something new, they usually either attack or try to escape from it… Attack includes such mild forms as ridicule, and escape includes merely putting out of mind.",
