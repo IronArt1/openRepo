@@ -24,7 +24,7 @@ final class TweetRepositoryInMemory implements TweetRepositoryInMemoryInterface
 
     /**
      * Obviously tweets would be comming from a DB. 
-     * Here it's just for the simplicity purposes
+     * Here it's just for the simplicity purposes, which is required by the test.
      *
      * An array of tweets'
      */
