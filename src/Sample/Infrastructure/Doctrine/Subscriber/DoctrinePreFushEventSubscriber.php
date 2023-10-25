@@ -41,7 +41,7 @@ class DoctrinePreFlushEventSubscriber implements EventSubscriber
 
                         return $ord;
                     };
-                    foreach (['first_name', 'last_name', 'payer_business_name'] as $key) {
+                    foreach (['first_name', 'last_name', 'middle_name'] as $key) {
                         if (isset($data[$key])) {
                             $currentString = '';
                             for ($i = 0; $i < strlen($data[$key]); $i++) {
