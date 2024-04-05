@@ -5,11 +5,11 @@ namespace App\Service;
 // This example of codding has nothing to do with current test application. 
 // The only purpose is just to have a glimpse on binary stuff.
 
-//use App\Exception\{
-//    TokenAlgorithmException,
-//    TokenSignatureIsEmptyException,
-//    TokenSignatureIsNotValidException
-//};
+use App\Exception\{
+    TokenAlgorithmException,
+    TokenSignatureIsEmptyException,
+    TokenSignatureIsNotValidException
+};
 use App\Sample\Domain\Interfaces\Service\JWTTokenServiceInterface;
 
 /**
@@ -101,20 +101,19 @@ class JWTTokenService implements JWTTokenServiceInterface
         $header =  json_decode(base64_decode($parts[0]));
 
         if (
-            !isset(json_decode(base64_decode($parts[0]))->alg)
-            || static::HEADER['alg'] !== json_decode(base64_decode($parts[0]))->alg
+            !isset($header->alg) || static::HEADER['alg'] !== json_decode(base64_decode($parts[0]))->alg
         ) {
-            //throw new TokenAlgorithmException();
+            throw new TokenAlgorithmException();
         }
 
         if (empty($parts[2])) {
-            //throw new TokenSignatureIsEmptyException();
+            throw new TokenSignatureIsEmptyException();
         }
 
         $hash = $this->generateSignature($parts[0], $parts[1]);
 
         if (!$this->hashEquals($parts[2], $hash)) {
-            //throw new TokenSignatureIsNotValidException();
+            throw new TokenSignatureIsNotValidException();
         };
 
         return json_decode($this->base64url_decode($parts[1]));
