@@ -11,6 +11,9 @@ use App\Sample\Infrastructure\Handlers\ChainOfResponsibilities\RoyaltyFeeHandler
 use App\Sample\Infrastructure\Handlers\ChainOfResponsibilities\RoyaltyFeeHandler\SubscriptionFeeHandler;
 use App\Sample\Infrastructure\Handlers\ChainOfResponsibilities\RoyaltyFeeHandler\UserFeeHandler;
 
+// An examples of transactional Doctrine work,
+// also "Chain of Responsibilities"
+// and SQL example are:
 class ProcessRoyaltiesCommand extends Command
 {
     /**
@@ -126,7 +129,7 @@ class ProcessRoyaltiesCommand extends Command
             //...
 
             // the following is the most complex raw SQL query statement I've created. (don't mind the absence of DQL here)
-            // that is just to show I can deal with complex SQL (don't mind setting up all parameters in a straight manner)
+            // that is just to show I can deal with complex SQL (don't mind setting up all parameters in a straight manner as well)
             $sql = "SELECT
                 rr.artist,
                 IF (user_profile.billing_country_code is NULL, 'unknown', user_profile.billing_country_code) as 'Geography',
@@ -251,7 +254,7 @@ class ProcessRoyaltiesCommand extends Command
                 // ...
             ]);
 
-            // and another type of SQL is just in case:
+            // and another type of a regular SQL on the daily basis':
             $sql = "SET @date = '2023-04-15';
                 SET @period = 'P04 23(Apr 23)';
                 SELECT
